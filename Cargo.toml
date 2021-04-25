@@ -1,0 +1,11 @@
+[package]
+name = "numbland"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies.bevy]
+version = "0.5"
+features = ["dynamic", "jpeg"]
+
+[profile.dev.package."*"]
+opt-level = 3
