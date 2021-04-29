@@ -1,5 +1,6 @@
+// use super::asset::ReloadAudioAsset;
 use super::{
-    asset::{ReloadAudioAsset, ShotAudioAsset},
+    asset::ShotAudioAsset,
     state::{Gun, GunState},
 };
 use crate::io::event::MouseEvent;
@@ -33,9 +34,9 @@ pub fn listen_gun_shot(
 pub fn listen_gun_reload(
     mut event_reader: EventReader<ReloadEvent>,
     audio: Res<Audio>,
-    audio_asset: Res<ReloadAudioAsset>,
+    // audio_asset: Res<ReloadAudioAsset>,
 ) {
-    event_reader.iter().for_each(|_| {
-        audio.play(audio_asset.0.clone());
-    })
+    // event_reader.iter().for_each(|_| {
+    //     audio.play(audio_asset.0.clone());
+    // })
 }

@@ -19,6 +19,7 @@ pub fn spawn_bullets_on_shoot(
                 },
                 ..Default::default()
             })
-            .insert(Bullet);
+            .insert(Bullet)
+            .insert(Timer::from_seconds(0.5, false));
     });
 }

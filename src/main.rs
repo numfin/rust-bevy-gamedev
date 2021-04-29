@@ -3,14 +3,14 @@ mod camera;
 mod gun;
 mod io;
 
-use bevy::prelude::*;
+use bevy::{core::FixedTimestep, diagnostic::FrameTimeDiagnosticsPlugin, prelude::*};
 
 fn main() {
     App::build()
         .insert_resource(ClearColor(Color::WHITE))
         .insert_resource(WindowDescriptor {
             title: "Kill numfin".into(),
-            mode: bevy::window::WindowMode::BorderlessFullscreen,
+            // mode: bevy::window::WindowMode::BorderlessFullscreen,
             ..Default::default()
         })
         .add_plugins(DefaultPlugins)
